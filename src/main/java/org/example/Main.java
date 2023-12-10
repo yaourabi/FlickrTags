@@ -9,12 +9,14 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        if (args.length != 2) {
-            System.err.println("Usage: FlickrTag <input path> <output path>");
+        if (args.length != 3) {
+            System.err.println("Usage: FlickrTag <input path> <output path> <K>");
             System.exit(-1);
         }
 
         Configuration conf = new Configuration();
+        conf.setInt("K", Integer.parseInt(args[2])); // Pass K to configuration
+
         Job job = Job.getInstance(conf, "Flickr Tag");
         job.setJarByClass(Main.class);
         job.setMapperClass(FlickrMapper.class);
