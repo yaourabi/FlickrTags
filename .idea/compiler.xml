@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hadoop_p2" />
+        <module name="FlickrTags" />
       </profile>
     </annotationProcessing>
   </component>

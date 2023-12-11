@@ -2,12 +2,12 @@ package org.example;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Counter;
-import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapred.*;
+
 
 import java.net.URLDecoder;
 
-public class FlickrMapper extends Mapper<LongWritable, Text, Text, Text> {
+/*public class FlickrMapper extends Mapper<LongWritable, Text, Text, Text> {
 
     @Override
     protected void map(LongWritable key, Text value, Context context) {
@@ -30,4 +30,4 @@ public class FlickrMapper extends Mapper<LongWritable, Text, Text, Text> {
             counter.increment(1);
         }
     }
-}
+}*/
